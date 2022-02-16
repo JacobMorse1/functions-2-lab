@@ -43,7 +43,7 @@ const postTaxPrices = prices.map(function(num1) {
   return num1 * 1.07
 })
 
-console.log(postTaxPrices)
+// console.log(postTaxPrices)
 
 ////////// PROBLEM 3 //////////
 
@@ -60,7 +60,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 
 // CODE HERE
 const totalPopulation = populations.reduce((runTot, curElem, curIndex, wholeArr) => runTot + curElem)
-console.log(totalPopulation)
+// console.log(totalPopulation)
 
 
 ////////// PROBLEM 4 //////////
@@ -84,7 +84,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter((element) => element.CP > 200)
+
+// console.log(myStrongest)
 
 
 
@@ -101,10 +103,14 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
 
+// const postTaxPrices = prices.map(function(num1) {
+//   return num1 * 1.07
+// })
+
 // CODE HERE
+const taxOrders = orders.map(order => Math.round(order.price * (order.tax +1) * 100) / 100)
 
-
-
+console.log(taxOrders)
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
